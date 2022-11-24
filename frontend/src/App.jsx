@@ -6,8 +6,8 @@ function App() {
   useEffect(() => {
     fetch("https://tp.arendz.nl/parks/")
       .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((err) => console.log(err));
+      .then((data) => console.warn(data))
+      .catch((err) => console.warn(err));
   }, []);
   return (
     <div className="App">
