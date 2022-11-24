@@ -1,6 +1,9 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import FindPark from "./pages/FindPark";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -12,10 +15,14 @@ function App() {
       .catch((err) => console.error(err));
   }, []);
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
-      <Home parks={parks} />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/findpark" element={<FindPark parks={parks} />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

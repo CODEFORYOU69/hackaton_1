@@ -22,10 +22,10 @@ import MenuItem from "@mui/material/MenuItem";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import AdbIcon from "@mui/icons-material/Adb";
 import "../style/Navbar.css";
-
-const pages = ["Accueil", "Trouver mon park", "Mes favoris", "Contact"];
+import { useNavigate } from "react-router-dom";
 
 function ResponsiveAppBar() {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -71,7 +71,6 @@ function ResponsiveAppBar() {
               <MenuIcon />
             </IconButton>
             <Menu
-              className=""
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -89,11 +88,12 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem className="menu-item" onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">Acceuil</Typography>
+                <Typography textAlign="center">Trouver mon parc</Typography>
+                <Typography textAlign="center">Mes favoris</Typography>
+                <Typography textAlign="center">Contact</Typography>
+              </MenuItem>
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
@@ -119,16 +119,34 @@ function ResponsiveAppBar() {
             className="box"
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
           >
-            {pages.map((page) => (
-              <Button
-                className="btn"
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "#FFAB48", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
+            <Button
+              onClick={() => navigate("/")}
+              className="btn"
+              sx={{ my: 2, color: "#FFAB48", display: "block" }}
+            >
+              Acceuil
+            </Button>
+            <Button
+              onClick={() => navigate("/findpark")}
+              className="btn"
+              sx={{ my: 2, color: "#FFAB48", display: "block" }}
+            >
+              Trouver mon parc
+            </Button>
+            <Button
+              className="btn"
+              sx={{ my: 2, color: "#FFAB48", display: "block" }}
+            >
+              Mes favoris
+            </Button>
+
+            <Button
+              onClick={() => navigate("/contact")}
+              className="btn"
+              sx={{ my: 2, color: "#FFAB48", display: "block" }}
+            >
+              Contact
+            </Button>
           </Box>
         </Toolbar>
       </Container>
