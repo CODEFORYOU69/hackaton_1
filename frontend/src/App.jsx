@@ -1,14 +1,16 @@
 import "./App.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Home from "./pages/Home";
 
 function App() {
+  const [parks, setParks] = useState([]);
   useEffect(() => {
     fetch("https://tp.arendz.nl/parks/")
       .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((err) => console.log(err));
+      .then((data) => setParks(data))
+      .catch((err) => console.error(err));
   }, []);
-  return <div className="App">HEllo</div>;
+  return <Home parks={parks} />;
 }
 
 export default App;
