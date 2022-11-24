@@ -1,0 +1,11 @@
+.appbar {
+  background-color: #00c8c1 !important;
+}
+
+.box {
+  justify-content: flex-end !important;
+}
+
+.btn {
+  margin-right: 5% !important;
+}

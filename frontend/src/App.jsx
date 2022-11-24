@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [parks, setParks] = useState([]);
@@ -10,7 +11,12 @@ function App() {
       .then((data) => setParks(data))
       .catch((err) => console.error(err));
   }, []);
-  return <Home parks={parks} />;
+  return (
+    <div>
+      <Navbar />
+      <Home parks={parks} />
+    </div>
+  );
 }
 
 export default App;
