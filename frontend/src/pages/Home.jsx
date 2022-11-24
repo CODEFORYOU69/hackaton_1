@@ -1,8 +1,7 @@
 import React from "react";
-import ParkCard from "../components/ParkCard";
 
-function Home({ parks }) {
-  return <div></div>;
+function Home() {
+  return <div>mvqfdvb</div>;
 }
 
 export default Home;
