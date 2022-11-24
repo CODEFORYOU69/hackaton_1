@@ -1,0 +1,19 @@
+.appbar {
+  background-color: #00c8c1 !important;
+}
+
+.box {
+  justify-content: flex-end !important;
+}
+
+.btn {
+  margin-right: 5% !important;
+}
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+}
+Typography {
+  height: 2rem !important;
+}
