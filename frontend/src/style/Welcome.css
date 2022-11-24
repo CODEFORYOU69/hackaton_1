@@ -1,11 +1,18 @@
 .welcomeall {
   height: 100vh;
   background-color: #0aa5a0;
+  background-image: url("../assets/img/wave.svg");
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
+.wave svg{
+  transform:rotate(90deg);
+  position: absolute;
+  bottom: 50vh;
+  right: 34vh;
+}
 .titleall {
   display: flex;
   align-items: center;
@@ -32,11 +39,7 @@
 .buttonreserve {
   margin: 10vh;
   outline: none;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 171, 72) 0%,
-    rgba(251, 75, 2, 1) 100%
-  );
+  background: #f99524;
   box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%),
     7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%);
   border: none;

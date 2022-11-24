@@ -19,7 +19,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import MenuItem from "@mui/material/MenuItem";
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-extraneous-dependencies,
 import AdbIcon from "@mui/icons-material/Adb";
 import "../style/Navbar.css";
 import { useNavigate } from "react-router-dom";
