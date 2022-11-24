@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useEffect } from "react";
+import Home from "@pages/Home";
 
 function App() {
   useEffect(() => {
@@ -8,7 +9,11 @@ function App() {
       .then((data) => console.log(data))
       .catch((err) => console.log(err));
   }, []);
-  return <div className="App">HEllo</div>;
+  return (
+    <div className="App">
+      <Home />
+    </div>
+  );
 }
 
 export default App;
