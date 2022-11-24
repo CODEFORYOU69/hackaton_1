@@ -1,0 +1,49 @@
+.welcomeall {
+  height: 100vh;
+  background-color: #0aa5a0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.titleall {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+}
+
+.title1 {
+  font-family: "Megrim", cursive;
+  padding-top: 30vh;
+  font-size: 6rem;
+}
+
+.title2 {
+  font-family: "Megrim", cursive;
+  font-size: 6rem;
+}
+
+.title3 {
+  font-family: "Megrim", cursive;
+  font-size: 6rem;
+}
+
+.buttonreserve {
+  margin: 10vh;
+  outline: none;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 171, 72) 0%,
+    rgba(251, 75, 2, 1) 100%
+  );
+  box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%),
+    7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%);
+  border: none;
+  color: white;
+  height: 4vh;
+  border-radius: 20px;
+  width: 200px;
+  height: 40px;
+  font-size: large;
+}
