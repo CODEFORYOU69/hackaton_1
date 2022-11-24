@@ -12,8 +12,9 @@ function App() {
   useEffect(() => {
     fetch("https://tp.arendz.nl/parks/")
       .then((response) => response.json())
-      .then((data) => setParks(data))
-      .catch((err) => console.error(err));
+      .then((data) => {
+        setParks(data).catch((err) => console.error(err));
+      });
   }, []);
   return (
     <BrowserRouter>
