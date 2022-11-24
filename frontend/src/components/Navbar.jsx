@@ -1,25 +1,14 @@
 import * as React from "react";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import AppBar from "@mui/material/AppBar";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Box from "@mui/material/Box";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Toolbar from "@mui/material/Toolbar";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import IconButton from "@mui/material/IconButton";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Typography from "@mui/material/Typography";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Menu from "@mui/material/Menu";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import MenuIcon from "@mui/icons-material/Menu";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Container from "@mui/material/Container";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import Button from "@mui/material/Button";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import MenuItem from "@mui/material/MenuItem";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import AdbIcon from "@mui/icons-material/Adb";
 import "../style/Navbar.css";
 import { useNavigate } from "react-router-dom";
