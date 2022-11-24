@@ -1,18 +1,28 @@
 import "./App.css";
-import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import FindPark from "./pages/FindPark";
 import Navbar from "./components/Navbar";
 
 function App() {
+  const [parks, setParks] = useState([]);
   useEffect(() => {
     fetch("https://tp.arendz.nl/parks/")
       .then((response) => response.json())
-      .then((data) => console.warn(data))
-      .catch((err) => console.warn(err));
+      .then((data) => setParks(data))
+      .catch((err) => console.error(err));
   }, []);
   return (
-    <div className="App">
+    <BrowserRouter>
       <Navbar />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/findpark" element={<FindPark parks={parks} />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
