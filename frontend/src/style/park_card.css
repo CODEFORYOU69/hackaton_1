@@ -1,0 +1,14 @@
+.card_park {
+  width: 45vw;
+}
+
+.park-card-container {
+  padding-top: 5rem;
+  margin-left: 1vw;
+}
+
+.card_park {
+  margin-bottom: 2rem;
+  border-radius: 1rem !important;
+  box-shadow: #a3a3a3b2 4px 4px 3px 1px !important;
+}
