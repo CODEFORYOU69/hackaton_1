@@ -1,4 +1,5 @@
 import React from "react";
+// import SimpleModal from "../components/SimpleModal";
 import ParkCard from "../components/ParkCard";
 
 function FindPark({ parks }) {
@@ -6,6 +7,7 @@ function FindPark({ parks }) {
     <div>
       {" "}
       <ParkCard parks={parks} />
+      {/* <SimpleModal /> */}
     </div>
   );
 }
