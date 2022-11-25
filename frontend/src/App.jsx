@@ -11,10 +11,11 @@ import Favorite from "./pages/Favorite";
 function App() {
   const [parks, setParks] = useState([]);
   useEffect(() => {
-    fetch("https://tp.arendz.nl/parks/")
+    fetch("http://localhost:5000/PARK")
       .then((response) => response.json())
       .then((data) => {
-        setParks(data).catch((err) => console.error(err));
+        setParks(data);
+        console.log(data);
       });
   }, []);
   return (

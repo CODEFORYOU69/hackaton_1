@@ -37,42 +37,41 @@ function ParkCard({ parks }) {
   return (
     <div className="park-card-container">
       <SimpleModal open={open} handleCloseModal={handleCloseModal} />
-      {parks.map((park) => (
-        <Card key={park.id} className="card_park" sx={{ maxWidth: 1000 }}>
-          <CardMedia
-            component="img"
-            alt="green iguana"
-            height="500"
-            image={park.image ? park.image : ""}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {park.name}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {park.description}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <FavoriteBorderIcon onClick={() => addStorage(park)} />
-
-            <FavoriteIcon onClick={() => removeStorage(park)} />
-            <Button disabled size="small">
-              {park.countryCode}
-            </Button>
-            <Button disabled size="small">
-              {park.parkType}
-            </Button>
-            <Button
-              variant="contained"
-              className="btn-info"
-              onClick={handleOpenModal}
-            >
-              Plus d'infos
-            </Button>
-          </CardActions>
-        </Card>
-      ))}
+      <div className="park-card-container">
+        {parks.map((park) => (
+          <Card className="card_park" sx={{ maxWidth: 1000 }}>
+            <CardMedia
+              component="img"
+              alt="green iguana"
+              height="500"
+              image={park.IMAGE ? park.IMAGE : ""}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {park.NAME}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {park.DESCRIPTION}
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button disabled size="small">
+                {park.COUNTRY}
+              </Button>
+              <Button disabled size="small">
+                {park.THEME}
+              </Button>
+              <Button
+                variant="contained"
+                className="btn-info"
+                onClick={handleOpenModal}
+              >
+                Plus d'infos
+              </Button>
+            </CardActions>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }

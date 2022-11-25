@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import FavoriteCard from "@components/FavoriteCard";
+import FavoriteCard from "../components/FavoriteCard";
 import "../style/favorite.css";
 
 function Favorite() {
