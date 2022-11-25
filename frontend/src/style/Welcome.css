@@ -14,8 +14,8 @@
   background-size: cover;
 }
 
-.wave svg{
-  transform:rotate(90deg);
+.wave svg {
+  transform: rotate(90deg);
   position: absolute;
   bottom: 50vh;
   right: 34vh;

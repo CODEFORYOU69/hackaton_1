@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import FindPark from "./pages/FindPark";
 import Navbar from "./components/Navbar";
+import Favorite from "./pages/Favorite";
 
 function App() {
   const [parks, setParks] = useState([]);
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/favorite" element={<Favorite />} />
         <Route path="/findpark" element={<FindPark parks={parks} />} />
       </Routes>
     </BrowserRouter>

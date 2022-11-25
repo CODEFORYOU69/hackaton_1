@@ -1,9 +1,12 @@
 .card_park {
   width: 45vw;
 }
+.card-park-container {
+  margin-top: 3rem;
+}
 
 .park-card-container {
-  padding-top: 6rem;
+  padding-top: 7rem;
   margin-left: 1vw;
 }
 
@@ -13,6 +16,6 @@
   box-shadow: #a3a3a3b2 4px 4px 3px 1px !important;
 }
 
-.btn-info{
+.btn-info {
   left: 65%;
 }
