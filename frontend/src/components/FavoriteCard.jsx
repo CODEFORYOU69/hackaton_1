@@ -14,7 +14,7 @@ export default function FavoriteCard({ park }) {
   const [isFavorite, setIsFavorite] = React.useState(true);
   const removeStorage = () => {
     const storedData = window.localStorage.parks.split(",");
-    const newData = storedData.filter((id) => id != park.id);
+    const newData = storedData.filter((ID) => ID != park.ID);
     window.localStorage.parks = newData;
     setIsFavorite(!isFavorite);
   };
@@ -22,13 +22,13 @@ export default function FavoriteCard({ park }) {
     <Card className="card-favorite">
       <CardHeader
         action={<IconButton aria-label="settings" />}
-        title={park.name}
+        title={park.NAME}
       />
       <CardMedia
         className="favorite-image"
         component="img"
         height="194"
-        image={park.image}
+        image={park.IMAGE}
         alt="Paella dish"
       />
       <CardActions disableSpacing>
