@@ -12,21 +12,23 @@ const icon = L.icon({
 });
 
 const AddMarkers = (props) => {
-  const { getID, handleClick } = props;
-  const [coordinate, setCoordinate] = useState([]);
+  const { getID, handleClick, layerGroup } = props;
+
   const map = useMap();
 
   useEffect(() => {
     fetch(`http://localhost:5000/PARK/${getID}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         const lat = parseInt(data.LATITUDE);
         const lng = parseInt(data.LONGITUDE);
-        const newCoord = [lat, lng];
+        const bounds = [lat, lng];
+        new L.Marker(bounds, { icon }).addTo(layerGroup);
 
-        new L.Marker(newCoord, { icon }).addTo(map);
+        map.panTo(bounds);
       });
+
+    map.addLayer(layerGroup);
   }, [handleClick]);
 
   return null;

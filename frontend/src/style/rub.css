@@ -1,0 +1,105 @@
+@font-face {
+    font-family: boorsok;
+    src: url(../assets/font/borsok-font/boorsok.otf);
+  }
+  
+
+
+.rub-title1 {
+    font-family: "boorsok", sans-serif;
+    font-size: 5rem;
+    color: white;
+
+}
+
+.rub-title2 {
+    font-family: "boorsok", sans-serif;
+    font-size: 5rem;
+    color: #f99524;
+
+}
+
+
+.txt-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10rem
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card-cont1 {
+    box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%),
+    7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%) !important;
+    margin: 2rem;
+    position: relative;
+    top: 80px;
+}
+
+.card-cont2{
+    box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%),
+    7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%) !important;
+    margin: 2rem;
+}
+
+.card-cont3 {
+    box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%),
+    7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%) !important;
+    margin: 2rem;
+}
+
+
+
+.img-card1 {
+    background-image: url("../assets/img/disneyParis.png") !important;
+    height: 27vh;
+}
+
+.img-card2 {
+    background-image: url("../assets/img/disneyOrlando.png") !important;
+    height: 27vh;
+}
+
+.img-card3 {
+    background-image: url("../assets/img/Europa-Park.png") !important;
+    height: 27vh;
+}
+
+
+.rub-container {
+
+    width: 100%;
+    height: 100vh;
+    background-color: #00C8C1;
+}
+
+.back-container {
+    background-image: url("../assets/img/hey.svg") !important;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    
+}
+
+.rub-tit {
+    font-family: "boorsok", sans-serif;
+    font-size: 2rem;
+    color: #f99524;
+}
+
+.rub-tit1 {
+    font-family: "boorsok", sans-serif !important;
+    font-size: 2rem !important;
+    color: black !important;
+}
+
+
+
+
+
+

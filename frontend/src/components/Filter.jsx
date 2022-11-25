@@ -5,12 +5,22 @@ import FilterTheme from "./FilterTheme";
 import Search from "./Search";
 import "../style/park_card.css";
 
-const Filter = () => {
+const Filter = ({
+  parks,
+  handleChange,
+  handleSelectTheme,
+  handleAttraction,
+  attraction,
+}) => {
   return (
     <div className="filter-container">
-      <FilterCountry />
-      <FilterTheme />
-      <Search />
+      <FilterCountry parks={parks} handleChange={handleChange} />
+      <FilterTheme parks={parks} handleSelectTheme={handleSelectTheme} />
+      <Search
+        parks={parks}
+        handleAttraction={handleAttraction}
+        attraction={attraction}
+      />
     </div>
   );
 };

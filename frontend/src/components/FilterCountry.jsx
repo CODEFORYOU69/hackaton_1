@@ -6,12 +6,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-const FilterCountry = () => {
-  const [country, setCountry] = React.useState("");
-
-  const handleChange = (event) => {
-    setCountry(event.target.value);
-  };
+const FilterCountry = ({ handleChange }) => {
   return (
     <div>
       <FormControl sx={{ m: 1, minWidth: 100 }}>
@@ -19,17 +14,24 @@ const FilterCountry = () => {
         <Select
           labelId="demo-simple-select-autowidth-label"
           id="demo-simple-select-autowidth"
-          value={country}
           onChange={handleChange}
           autoWidth
           label="Pays"
         >
-          <MenuItem value="">
-            <em>---</em>
-          </MenuItem>
-          <MenuItem value={10}>France</MenuItem>
-          <MenuItem value={21}>Etats-Unis</MenuItem>
-          <MenuItem value={22}>Italie</MenuItem>
+          <MenuItem value="">All</MenuItem>
+          <MenuItem value="FRANCE">FRANCE</MenuItem>
+          <MenuItem value="ESPAGNE">ESPAGNE</MenuItem>
+          <MenuItem value="PAYS BAS">PAYS BAS</MenuItem>
+          <MenuItem value="ETATS UNIS">ETATS UNIS</MenuItem>
+          <MenuItem value="MEXIQUE">MEXIQUE</MenuItem>
+          <MenuItem value="CANADA">CANADA</MenuItem>
+          <MenuItem value="GRANDE BRETAGNE">GRANDE BRETAGNE</MenuItem>
+          <MenuItem value="DANEMARK">DANEMARK</MenuItem>
+          <MenuItem value="SUEDE">SUEDE</MenuItem>
+          <MenuItem value="MAROC">MAROC</MenuItem>
+          <MenuItem value="BELGIQUE">BELGIQUE</MenuItem>
+          <MenuItem value="ALLEMAGNE">ALLEMAGNE</MenuItem>
+          <MenuItem value="POLOGNE">POLOGNE</MenuItem>
         </Select>
       </FormControl>
     </div>
