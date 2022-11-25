@@ -122,7 +122,7 @@ function ResponsiveAppBar() {
               sx={{ my: 2, color: "#FFAB48", display: "block" }}
               className="font-nav"
             >
-              Acceuil
+              Accueil
             </Button>
             <Button
               onClick={() => navigate("/findpark")}
