@@ -6,7 +6,7 @@ import "../style/park_card.css";
 
 function FindPark({ parks }) {
   return (
-    <div className="find-container">
+    <div>
       <ParkCard parks={parks} />
       <Map />
     </div>

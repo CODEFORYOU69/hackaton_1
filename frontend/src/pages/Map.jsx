@@ -1,8 +1,8 @@
 /* eslint-disable */
 import React from "react";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer } from "react-leaflet";
 import L from "leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 import "./Map.css";
 import AddMarkers from "./AddMarkers";
 
