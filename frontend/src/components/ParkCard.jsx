@@ -12,7 +12,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import SimpleModal from "./SimpleModal";
 
-function ParkCard({ parks }) {
+function ParkCard({ parks, setGetID, handleClick }) {
   const addStorage = (park) => {
     const storedData = window.localStorage.parks
       ? window.localStorage.parks.split(",")
@@ -34,48 +34,13 @@ function ParkCard({ parks }) {
   const handleCloseModal = () => {
     setOpenModal(false);
   };
+
   return (
     <div className="park-card-container">
       <SimpleModal open={open} handleCloseModal={handleCloseModal} />
-      {parks.map((park) => (
-        <Card key={park.id} className="card_park" sx={{ maxWidth: 1000 }}>
-          <CardMedia
-            component="img"
-            alt="green iguana"
-            height="500"
-            image={park.image ? park.image : ""}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {park.name}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {park.description}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <FavoriteBorderIcon onClick={() => addStorage(park)} />
-
-            <FavoriteIcon onClick={() => removeStorage(park)} />
-            <Button disabled size="small">
-              {park.countryCode}
-            </Button>
-            <Button disabled size="small">
-              {park.parkType}
-            </Button>
-            <Button
-              variant="contained"
-              className="btn-info"
-              onClick={handleOpenModal}
-            >
-              Plus d'infos
-            </Button>
-          </CardActions>
-        </Card>
-      ))}
-      {/* <div className="park-card-container">
+      <div className="park-card-container" onClick={setGetID(parks.ID)}>
         {parks.map((park) => (
-          <Card className="card_park" sx={{ maxWidth: 1000 }}>
+          <Card key={park.ID} className="card_park" sx={{ maxWidth: 1000 }}>
             <CardMedia
               component="img"
               alt="green iguana"
@@ -107,7 +72,7 @@ function ParkCard({ parks }) {
             </CardActions>
           </Card>
         ))}
-      </div> */}
+      </div>
     </div>
   );
 }

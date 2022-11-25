@@ -11,21 +11,23 @@ const icon = L.icon({
   iconUrl: rollerMarker,
 });
 
-const AddMarkers = () => {
+const AddMarkers = (props) => {
+  const { getID, handleClick } = props;
   const [coordinate, setCoordinate] = useState([]);
   const map = useMap();
 
   useEffect(() => {
-    fetch("https://tp.arendz.nl/parks/")
+    fetch(`http://localhost:5000/PARK/${getID}`)
       .then((response) => response.json())
       .then((data) => {
-        const lat = data[1].location.lat;
-        const lng = data[1].location.lng;
+        console.log(data);
+        const lat = parseInt(data.LATITUDE);
+        const lng = parseInt(data.LONGITUDE);
         const newCoord = [lat, lng];
 
         new L.Marker(newCoord, { icon }).addTo(map);
       });
-  }, [map]);
+  }, [handleClick]);
 
   return null;
 };

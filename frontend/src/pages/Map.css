@@ -1,6 +1,6 @@
 .leaflet-container {
   width: 50vw;
-  height: 90vh;
+  height: 65vh;
   margin-right: 1vw;
   border-radius: 1rem;
 }
@@ -8,6 +8,6 @@
   .map-container {
     position: fixed;
     right: 0;
-    top: 7rem;
+    top: 18rem;
     box-shadow: #a3a3a3b2 4px 4px 3px 1px !important;
   }

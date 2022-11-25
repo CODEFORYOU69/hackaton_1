@@ -6,7 +6,8 @@
 }
 
 .park-card-container {
-  padding-top: 7rem;
+  position: relative;
+  top: 9rem;
   margin-left: 1vw;
 }
 
@@ -19,3 +20,16 @@
 .btn-info {
   left: 65%;
 }
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  background-color: white;
+  height: 30vh;
+  width: 100vw;
+  z-index: 200;
+  padding-top: 10rem;
+
+}
+
