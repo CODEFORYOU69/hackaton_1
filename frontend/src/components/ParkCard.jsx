@@ -17,14 +17,14 @@ function ParkCard({ parks, setGetID, handleClick }) {
     const storedData = window.localStorage.parks
       ? window.localStorage.parks.split(",")
       : [];
-    if (!storedData.includes(park.id.toString())) {
-      storedData.push(park.id);
+    if (!storedData.includes(park.ID.toString())) {
+      storedData.push(park.ID);
       window.localStorage.parks = storedData;
     }
   };
   const removeStorage = (park) => {
     const storedData = window.localStorage.parks.split(",");
-    const newData = storedData.filter((id) => id != park.id);
+    const newData = storedData.filter((ID) => ID != park.ID);
     window.localStorage.parks = newData;
   };
   const [open, setOpenModal] = React.useState(false);
@@ -38,41 +38,40 @@ function ParkCard({ parks, setGetID, handleClick }) {
   return (
     <div className="park-card-container">
       <SimpleModal open={open} handleCloseModal={handleCloseModal} />
-      <div className="park-card-container" onClick={setGetID(parks.ID)}>
-        {parks.map((park) => (
-          <Card key={park.ID} className="card_park" sx={{ maxWidth: 1000 }}>
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              height="500"
-              image={park.IMAGE ? park.IMAGE : ""}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {park.NAME}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {park.DESCRIPTION}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button disabled size="small">
-                {park.COUNTRY}
-              </Button>
-              <Button disabled size="small">
-                {park.THEME}
-              </Button>
-              <Button
-                variant="contained"
-                className="btn-info"
-                onClick={handleOpenModal}
-              >
-                Plus d'infos
-              </Button>
-            </CardActions>
-          </Card>
-        ))}
-      </div>
+      {parks.map((park) => (
+        <Card key={park.ID} className="card_park" sx={{ maxWidth: 1000 }}>
+          <CardMedia
+            component="img"
+            alt="green iguana"
+            height="500"
+            image={park.IMAGE ? park.IMAGE : ""}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {park.NAME}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {park.DESCRIPTION}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <FavoriteBorderIcon onClick={() => addStorage(park)} />
+
+            <FavoriteIcon onClick={() => removeStorage(park)} />
+            <Button disabled size="small">
+              {park.COUNTRY}
+            </Button>
+            <Button disabled size="small"></Button>
+            <Button
+              variant="contained"
+              className="btn-info"
+              onClick={handleOpenModal}
+            >
+              Plus d'infos
+            </Button>
+          </CardActions>
+        </Card>
+      ))}
     </div>
   );
 }

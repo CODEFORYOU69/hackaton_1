@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import FavoriteCard from "@components/FavoriteCard";
+import FavoriteCard from "../components/FavoriteCard";
 import "../style/favorite.css";
 
 function Favorite() {
@@ -13,7 +13,7 @@ function Favorite() {
     // pour chaque id dans parkId,faire un fetch
     /* eslint-disable-next-line no-plusplus */
     for (let i = 0; i < parkId.length; i++) {
-      fetch(`https://tp.arendz.nl/parks/${parkId[i]}`)
+      fetch(`http://localhost:5000/PARK/${parkId[i]}`)
         .then((res) => res.json())
         .then((results) => setListData((data) => [...data, results]));
     }
