@@ -9,10 +9,11 @@ import Navbar from "./components/Navbar";
 function App() {
   const [parks, setParks] = useState([]);
   useEffect(() => {
-    fetch("https://tp.arendz.nl/parks/")
+    fetch("https://www.theparkdb.com/results/getParks/")
       .then((response) => response.json())
       .then((data) => setParks(data))
       .catch((err) => console.error(err));
+    console.log(parks);
   }, []);
   return (
     <BrowserRouter>

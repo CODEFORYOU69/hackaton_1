@@ -23,12 +23,12 @@ function ParkCard({ parks }) {
               {park.name}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {park.description}
+              {park.country_name}
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">{park.countryCode}</Button>
-            <Button size="small">{park.parkType}</Button>
+            <Button size="small">{park.currency_code}</Button>
+            <Button size="small">{park.park_type_id}</Button>
           </CardActions>
         </Card>
       ))}
