@@ -1,6 +1,12 @@
+@font-face {
+  font-family: boorsok;
+  src: url(../assets/font/borsok-font/boorsok.otf);
+}
+
 .appbar {
   background-color: #00c8c1 !important;
   position: fixed !important;
+  z-index: 1000000!important;
 }
 
 .box {
@@ -15,7 +21,34 @@
   display: flex;
   flex-direction: column;
   height: 20vh;
+ 
 }
 Typography {
   height: 2rem !important;
+  
+
+}
+
+.font-nav {
+  font-family: "boorsok", sans-serif !important;
+  font-size: 1.5rem !important;
+  color: white !important;
+  margin-right: 4rem !important;
+
+}
+
+.logo-title {
+  display: flex;
+  flex-direction: column;
+  font-family: "boorsok", sans-serif !important;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  line-height: 2rem;
+
+}
+
+.park {
+  color: #f99524;
 }
