@@ -5,16 +5,18 @@ import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import Autocomplete from "@mui/material/Autocomplete";
 
-const Search = () => {
+const Search = ({ parks, handleAttraction, attraction }) => {
   return (
     <Stack spacing={2} sx={{ width: 300 }}>
       <Autocomplete
         freeSolo
         id="free-solo-2-demo"
         disableClearable
-        options={top100Films.map((option) => option.title)}
+        options={parks.map((park) => park.NAME)}
         renderInput={(params) => (
           <TextField
+            onChange={handleAttraction}
+            value={attraction}
             {...params}
             label="Chercher une attraction"
             InputProps={{

@@ -27,6 +27,11 @@ function FindPark({ parks }) {
   const handleSelectTheme = (event) => {
     setTheme(event.target.value);
   };
+  const [attraction, setAttraction] = useState("");
+  const handleAttraction = (event) => {
+    setAttraction(event.target.value);
+    console.log(event.target.value);
+  };
 
   return (
     <div className="find">
@@ -36,6 +41,8 @@ function FindPark({ parks }) {
         handleChange={handleChange}
         theme={theme}
         handleSelectTheme={handleSelectTheme}
+        handleAttraction={handleAttraction}
+        attraction={attraction}
       />
       <ParkCard
         parks={parks}
@@ -44,6 +51,7 @@ function FindPark({ parks }) {
         getID={getID}
         country={country}
         theme={theme}
+        attraction={attraction}
       />
       <Map getID={getID} handleClick={handleClick} layerGroup={layerGroup} />
     </div>
