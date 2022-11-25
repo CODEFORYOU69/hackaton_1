@@ -1,15 +1,15 @@
 .welcomeall {
   height: 100vh;
   background-color: #0aa5a0;
-  background-image: url("../assets/img/wave.svg");
+  background-image: url("../assets/img/Untitled.svg");
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-size: cover;
 }
 
-.wave svg{
-  transform:rotate(90deg);
+.wave svg {
+  transform: rotate(90deg);
   position: absolute;
   bottom: 50vh;
   right: 34vh;

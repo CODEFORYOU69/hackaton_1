@@ -79,7 +79,7 @@ function ResponsiveAppBar() {
               }}
             >
               <MenuItem className="menu-item" onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Acceuil</Typography>
+                <Typography textAlign="center">Accueil</Typography>
                 <Typography textAlign="center">Trouver mon parc</Typography>
                 <Typography textAlign="center">Mes favoris</Typography>
                 <Typography textAlign="center">Contact</Typography>

@@ -1,0 +1,25 @@
+.rubriquetitle {
+  font-family: "Silvia";
+  text-shadow: 2px 3px 0px #898999;
+  color: white;
+  text-align: center;
+  font-size: 60px;
+}
+
+.country_name {
+  background-color: #898999;
+  border-radius: 50vh;
+  height: 15vh;
+  width: 8.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapping {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  flex-grow: 2;
+}

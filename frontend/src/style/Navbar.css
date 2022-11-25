@@ -1,11 +1,11 @@
 .appbar {
   background-color: #00c8c1 !important;
   position: fixed !important;
+  z-index: 1000;
 }
 
 .box {
   justify-content: center !important;
-  
 }
 
 .btn {
