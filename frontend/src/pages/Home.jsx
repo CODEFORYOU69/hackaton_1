@@ -1,7 +1,7 @@
+/* eslint-disable */
 import React from "react";
-import ParkCard from "../components/ParkCard";
 
-function Home({ parks }) {
+function Home() {
   return <div></div>;
 }
 

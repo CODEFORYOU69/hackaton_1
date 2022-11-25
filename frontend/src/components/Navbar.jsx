@@ -134,6 +134,7 @@ function ResponsiveAppBar() {
               Trouver mon parc
             </Button>
             <Button
+              onClick={() => navigate("/favorite")}
               className="btn"
               sx={{ my: 2, color: "#FFAB48", display: "block" }}
             >

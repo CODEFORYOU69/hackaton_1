@@ -1,3 +1,5 @@
+/* eslint-disable */
+/* eslint eqeqeq: 0 */
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -6,12 +8,28 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import "../style/park_card.css";
 import { Button } from "@mui/material";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 function ParkCard({ parks }) {
+  const addStorage = (park) => {
+    const storedData = window.localStorage.parks
+      ? window.localStorage.parks.split(",")
+      : [];
+    if (!storedData.includes(park.id.toString())) {
+      storedData.push(park.id);
+      window.localStorage.parks = storedData;
+    }
+  };
+  const removeStorage = (park) => {
+    const storedData = window.localStorage.parks.split(",");
+    const newData = storedData.filter((id) => id != park.id);
+    window.localStorage.parks = newData;
+  };
   return (
     <div>
       {parks.map((park) => (
-        <Card className="card_park" sx={{ maxWidth: 1000 }}>
+        <Card key={park.id} className="card_park" sx={{ maxWidth: 1000 }}>
           <CardMedia
             component="img"
             alt="green iguana"
@@ -27,6 +45,10 @@ function ParkCard({ parks }) {
             </Typography>
           </CardContent>
           <CardActions>
+            <FavoriteBorderIcon onClick={() => addStorage(park)} />
+
+            <FavoriteIcon onClick={() => removeStorage(park)} />
+
             <Button size="small">{park.countryCode}</Button>
             <Button size="small">{park.parkType}</Button>
           </CardActions>
