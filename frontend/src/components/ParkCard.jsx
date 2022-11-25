@@ -28,22 +28,22 @@ function ParkCard({ parks }) {
               component="img"
               alt="green iguana"
               height="500"
-              image={park.image ? park.image : ""}
+              image={park.IMAGE ? park.IMAGE : ""}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                {park.name}
+                {park.NAME}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                {park.description}
+                {park.DESCRIPTION}
               </Typography>
             </CardContent>
             <CardActions>
               <Button disabled size="small">
-                {park.countryCode}
+                {park.COUNTRY}
               </Button>
               <Button disabled size="small">
-                {park.parkType}
+                {park.THEME}
               </Button>
               <Button
                 variant="contained"
