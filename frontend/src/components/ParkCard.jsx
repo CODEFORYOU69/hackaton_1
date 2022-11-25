@@ -10,6 +10,7 @@ import "../style/park_card.css";
 import { Button } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import SimpleModal from "./SimpleModal";
 
 function ParkCard({ parks }) {
   const addStorage = (park) => {
@@ -26,8 +27,16 @@ function ParkCard({ parks }) {
     const newData = storedData.filter((id) => id != park.id);
     window.localStorage.parks = newData;
   };
+  const [open, setOpenModal] = React.useState(false);
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
   return (
-    <div>
+    <div className="park-card-container">
+      <SimpleModal open={open} handleCloseModal={handleCloseModal} />
       {parks.map((park) => (
         <Card key={park.id} className="card_park" sx={{ maxWidth: 1000 }}>
           <CardMedia
@@ -48,9 +57,19 @@ function ParkCard({ parks }) {
             <FavoriteBorderIcon onClick={() => addStorage(park)} />
 
             <FavoriteIcon onClick={() => removeStorage(park)} />
-
-            <Button size="small">{park.countryCode}</Button>
-            <Button size="small">{park.parkType}</Button>
+            <Button disabled size="small">
+              {park.countryCode}
+            </Button>
+            <Button disabled size="small">
+              {park.parkType}
+            </Button>
+            <Button
+              variant="contained"
+              className="btn-info"
+              onClick={handleOpenModal}
+            >
+              Plus d'infos
+            </Button>
           </CardActions>
         </Card>
       ))}

@@ -1,9 +1,10 @@
 .appbar {
   background-color: #00c8c1 !important;
+  position: fixed !important;
 }
 
 .box {
-  justify-content: flex-end !important;
+  justify-content: center !important;
 }
 
 .btn {
