@@ -6,12 +6,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-const FilterTheme = () => {
-  const [theme, setTheme] = React.useState("");
-
-  const handleChange = (event) => {
-    setTheme(event.target.value);
-  };
+const FilterTheme = ({ handleSelectTheme }) => {
   return (
     <div>
       <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -21,17 +16,14 @@ const FilterTheme = () => {
         <Select
           labelId="demo-simple-select-autowidth-label"
           id="demo-simple-select-autowidth"
-          value={theme}
-          onChange={handleChange}
+          onChange={handleSelectTheme}
           autoWidth
           label="Categories"
         >
-          <MenuItem value="">
-            <em>---</em>
-          </MenuItem>
-          <MenuItem value={10}>Parc Aquatique</MenuItem>
-          <MenuItem value={21}>Parc à thème</MenuItem>
-          <MenuItem value={22}>lol</MenuItem>
+          <MenuItem value="">All</MenuItem>
+          <MenuItem value="THEMEPARK">Parc Aquatique</MenuItem>
+          <MenuItem value="WATER_PARK">Parc à thème</MenuItem>
+          <MenuItem value="ZOO">ZOO</MenuItem>
         </Select>
       </FormControl>
     </div>
