@@ -15,10 +15,34 @@ function FindPark({ parks }) {
     setIsClicked(!isClicked);
     console.log("hello");
   };
+
+  const [country, setCountry] = useState("");
+
+  const handleChange = (event) => {
+    setCountry(event.target.value);
+  };
+
+  const [theme, setTheme] = useState("");
+  const handleSelectTheme = (event) => {
+    setTheme(event.target.value);
+  };
+
   return (
     <div className="find">
-      <Filter />
-      <ParkCard parks={parks} setGetID={setGetID} handleClick={handleClick} />
+      <Filter
+        parks={parks}
+        country={country}
+        handleChange={handleChange}
+        theme={theme}
+        handleSelectTheme={handleSelectTheme}
+      />
+      <ParkCard
+        parks={parks}
+        setGetID={setGetID}
+        handleClick={handleClick}
+        country={country}
+        theme={theme}
+      />
       <Map getID={getID} isClicked={isClicked} />
     </div>
   );
