@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Radial Vintage;
+  src: url(../assets/font/radial vintage/Radial Vintage.otf);
+}
+
+@font-face {
+  font-family: Silvia;
+  src: url(../assets/font/silvia/Silvia Regular.otf);
+}
+
+.container {
+  height: 100vh;
+  /* background-image: linear-gradient(to bottom, #00c8c1, #68d5e9, #addffc, #e1ecff, #ffffff); */
+  background-color: #00c8c1;
+}
+
+.cat-title {
+  font-family: "Silvia";
+  text-shadow: 2px 3px 0px #898999;
+  color: white;
+  text-align: center;
+  font-size: 60px;
+}
+
+.line-container {
+  display: flex;
+  justify-content: center;
+}
+
+.img-wheel {
+  background: url("../assets/img/rollercoaster.svg");
+  background-size: contain;
+  height: 8vh;
+  width: 4vw;
+  background-repeat: no-repeat;
+}
+
+.line {
+  margin-top: 3.1vw;
+  border-radius: 2rem;
+  width: 20vw;
+  height: 4px;
+  background-color: white;
+  text-shadow: 2px 3px 0px #898999;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  width: 100%;
+}
