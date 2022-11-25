@@ -12,7 +12,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import SimpleModal from "./SimpleModal";
 
-function ParkCard({ parks }) {
+function ParkCard({ parks, setGetID, handleClick }) {
   const addStorage = (park) => {
     const storedData = window.localStorage.parks
       ? window.localStorage.parks.split(",")
@@ -34,6 +34,7 @@ function ParkCard({ parks }) {
   const handleCloseModal = () => {
     setOpenModal(false);
   };
+
   return (
     <div className="park-card-container">
       <SimpleModal open={open} handleCloseModal={handleCloseModal} />

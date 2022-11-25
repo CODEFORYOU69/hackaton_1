@@ -25,7 +25,7 @@ function Favorite() {
         {listData.length > 0 ? (
           listData.map((park) => <FavoriteCard park={park} key={park.id} />)
         ) : (
-          <h3>Pas de favoris !</h3>
+          <h3 className="no-favori">Pas de favoris !</h3>
         )}
       </div>
     </div>
