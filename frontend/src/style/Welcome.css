@@ -3,7 +3,6 @@
   src: url(../assets/font/borsok-font/boorsok.otf);
 }
 
-
 .welcomeall {
   height: 100vh;
   background-color: #0aa5a0;
@@ -37,7 +36,7 @@
 .title2 {
   font-family: "boorsok", sans-serif;
   font-size: 6rem;
-  color:#f99524;
+  color: #f99524;
 }
 
 .title3 {
@@ -53,14 +52,13 @@
   border: none;
   color: white;
   border-radius: 20px;
-  width: 12vw;
+  width: 20vw;
   height: 5vh;
   font-size: 1.2rem;
   font-family: "boorsok", sans-serif;
   padding-top: 0.3rem;
   margin-top: 3rem;
 }
-
 
 .img-back {
   background-image: url("../assets/img/roll.svg");

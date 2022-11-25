@@ -1,6 +1,6 @@
 /* eslint-disable */
-import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
 import React, { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";

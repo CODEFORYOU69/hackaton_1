@@ -12,7 +12,7 @@ app.use(
   })
 );
 
-const port = parseInt(process.env.APP_PORT ?? "5001", 10);
+const port = parseInt(process.env.APP_PORT ?? "5000", 10);
 const welcome = (req, res) => {
   res.send("Welcome");
 };

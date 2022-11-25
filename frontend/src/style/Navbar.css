@@ -6,7 +6,7 @@
 .appbar {
   background-color: #00c8c1 !important;
   position: fixed !important;
-  z-index: 1000000!important;
+  z-index: 1000000 !important;
 }
 
 .box {
@@ -20,12 +20,9 @@
   display: flex;
   flex-direction: column;
   height: 20vh;
- 
 }
 Typography {
   height: 2rem !important;
-  
-
 }
 
 .font-nav {
@@ -33,7 +30,6 @@ Typography {
   font-size: 1.5rem !important;
   color: white !important;
   margin-right: 4rem !important;
-
 }
 
 .logo-title {
@@ -45,7 +41,6 @@ Typography {
   margin-top: 0.5rem;
   font-size: 2rem;
   line-height: 2rem;
-
 }
 
 .park {
