@@ -1,6 +1,6 @@
 /* eslint-disable */
 /* eslint eqeqeq: 0 */
-import * as React from "react";
+import React, { useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -12,7 +12,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import SimpleModal from "./SimpleModal";
 
-function ParkCard({ parks, setGetID, handleClick, country, theme }) {
+function ParkCard({ parks, setGetID, handleClick, getID, country, theme }) {
   const addStorage = (park) => {
     const storedData = window.localStorage.parks
       ? window.localStorage.parks.split(",")
@@ -43,6 +43,10 @@ function ParkCard({ parks, setGetID, handleClick, country, theme }) {
         .map((park) => (
           <Card key={park.ID} className="card_park" sx={{ maxWidth: 1000 }}>
             <CardMedia
+              onClick={() => {
+                handleClick();
+                setGetID(park.ID);
+              }}
               component="img"
               alt="green iguana"
               height="500"
