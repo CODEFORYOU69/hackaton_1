@@ -1,4 +1,5 @@
 import React from "react";
+import "../style/Navbar.css";
 
 function Contact() {
   const [formStatus, setFormStatus] = React.useState("Send");

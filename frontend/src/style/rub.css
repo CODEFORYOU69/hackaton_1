@@ -38,36 +38,34 @@
     7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%) !important;
     margin: 2rem;
     position: relative;
-    top: 80px;
+    top: 20px;
 }
 
 .card-cont2{
     box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%),
     7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%) !important;
-    margin: 2rem;
 }
 
 .card-cont3 {
     box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%),
     7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%) !important;
-    margin: 2rem;
 }
 
 
 
 .img-card1 {
     background-image: url("../assets/img/disneyParis.png") !important;
-    height: 27vh;
+    height: 20vh;
 }
 
 .img-card2 {
     background-image: url("../assets/img/disneyOrlando.png") !important;
-    height: 27vh;
+    height: 20vh;
 }
 
 .img-card3 {
     background-image: url("../assets/img/Europa-Park.png") !important;
-    height: 27vh;
+    height: 26vh;
 }
 
 
@@ -88,7 +86,8 @@
 
 .rub-tit {
     font-family: "boorsok", sans-serif;
-    font-size: 2rem;
+    font-size: 2rem !important;
+    left: 10% !important;
     color: #f99524;
 }
 
@@ -97,9 +96,6 @@
     font-size: 2rem !important;
     color: black !important;
 }
-
-
-
 
 
 
