@@ -6,14 +6,16 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import FindPark from "./pages/FindPark";
 import Navbar from "./components/Navbar";
+import Favorite from "./pages/Favorite";
 
 function App() {
   const [parks, setParks] = useState([]);
   useEffect(() => {
-    fetch("https://tp.arendz.nl/parks/")
+    fetch("http://localhost:5000/PARK")
       .then((response) => response.json())
       .then((data) => {
-        setParks(data).catch((err) => console.error(err));
+        setParks(data);
+        console.log(data);
       });
   }, []);
   return (
@@ -22,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/favorite" element={<Favorite />} />
         <Route path="/findpark" element={<FindPark parks={parks} />} />
       </Routes>
     </BrowserRouter>

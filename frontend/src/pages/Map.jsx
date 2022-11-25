@@ -1,8 +1,8 @@
 /* eslint-disable */
 import React from "react";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer } from "react-leaflet";
 import L from "leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 import "./Map.css";
 import AddMarkers from "./AddMarkers";
 
@@ -10,7 +10,7 @@ const location = [46.232192999999995, 2.209666999999996];
 const zoom = 5;
 
 const Map = (props) => {
-  const { coordinate } = props;
+  const { coordinate, getID, isClicked } = props;
   return (
     <div className="map-container">
       <MapContainer
@@ -23,7 +23,7 @@ const Map = (props) => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
         />
-        <AddMarkers coordinate={coordinate} />
+        <AddMarkers coordinate={coordinate} getID={getID} />
       </MapContainer>
     </div>
   );

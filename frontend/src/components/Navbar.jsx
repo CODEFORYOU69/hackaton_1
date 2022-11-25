@@ -1,3 +1,4 @@
+/* eslint-disable */
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -13,6 +14,17 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import "../style/Navbar.css";
 import { useNavigate } from "react-router-dom";
+import animationData from "../assets/img/animationData.json";
+import Lottie from "react-lottie";
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationData,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
 
 function ResponsiveAppBar() {
   const navigate = useNavigate();
@@ -30,25 +42,12 @@ function ResponsiveAppBar() {
     <AppBar position="static" className="appbar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography>
-
+          <Lottie options={defaultOptions} height={90} width={90} />
+          <div className="logo-title">
+            <span>THEME </span>
+            <span className="park">PARK</span>
+            <span>WORLD</span>
+          </div>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -79,10 +78,18 @@ function ResponsiveAppBar() {
               }}
             >
               <MenuItem className="menu-item" onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Accueil</Typography>
-                <Typography textAlign="center">Trouver mon parc</Typography>
-                <Typography textAlign="center">Mes favoris</Typography>
-                <Typography textAlign="center">Contact</Typography>
+                <Typography className="font-nav" textAlign="center">
+                  Accueil
+                </Typography>
+                <Typography className="font-nav" textAlign="center">
+                  Trouver mon parc
+                </Typography>
+                <Typography className="font-nav" textAlign="center">
+                  Mes favoris
+                </Typography>
+                <Typography className="font-nav" textAlign="center">
+                  Contact
+                </Typography>
               </MenuItem>
             </Menu>
           </Box>
@@ -111,20 +118,21 @@ function ResponsiveAppBar() {
           >
             <Button
               onClick={() => navigate("/")}
-              className="btn"
+              className="btn font-nav"
               sx={{ my: 2, color: "#FFAB48", display: "block" }}
             >
               Acceuil
             </Button>
             <Button
               onClick={() => navigate("/findpark")}
-              className="btn"
+              className="btn font-nav"
               sx={{ my: 2, color: "#FFAB48", display: "block" }}
             >
               Trouver mon parc
             </Button>
             <Button
-              className="btn"
+              onClick={() => navigate("/favorite")}
+              className="btn font-nav"
               sx={{ my: 2, color: "#FFAB48", display: "block" }}
             >
               Mes favoris
@@ -132,7 +140,7 @@ function ResponsiveAppBar() {
 
             <Button
               onClick={() => navigate("/contact")}
-              className="btn"
+              className="btn font-nav"
               sx={{ my: 2, color: "#FFAB48", display: "block" }}
             >
               Contact

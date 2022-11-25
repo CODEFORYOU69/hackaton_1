@@ -1,3 +1,9 @@
+@font-face {
+  font-family: boorsok;
+  src: url(../assets/font/borsok-font/boorsok.otf);
+}
+
+
 .welcomeall {
   height: 100vh;
   background-color: #0aa5a0;
@@ -19,38 +25,50 @@
   align-items: center;
   flex-direction: column;
   background-repeat: no-repeat;
+  padding-left: 2rem;
 }
 
 .title1 {
-  font-family: "Megrim", cursive;
+  font-family: "boorsok", sans-serif;
   padding-top: 30vh;
   font-size: 6rem;
-  font-weight: bolder;
 }
 
 .title2 {
-  font-family: "Megrim", cursive;
+  font-family: "boorsok", sans-serif;
   font-size: 6rem;
-  font-weight: bolder;
+  color:#f99524;
 }
 
 .title3 {
-  font-family: "Megrim", cursive;
+  font-family: "boorsok", sans-serif;
   font-size: 6rem;
-  font-weight: bolder;
 }
 
 .buttonreserve {
-  margin: 10vh;
   outline: none;
   background: #f99524;
   box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%),
     7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%);
   border: none;
   color: white;
-  height: 4vh;
   border-radius: 20px;
-  width: 200px;
-  height: 40px;
-  font-size: large;
+  width: 12vw;
+  height: 5vh;
+  font-size: 1.2rem;
+  font-family: "boorsok", sans-serif;
+  padding-top: 0.3rem;
+  margin-top: 3rem;
+}
+
+
+.img-back {
+  background-image: url("../assets/img/roll.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 700px;
+  height: 60%;
+  width: 60%;
 }
