@@ -24,11 +24,12 @@ function SimpleModal({ open, handleCloseModal, park }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          {park.image}
           <Typography id="modal-modal-title" variant="h6" component="h2">
             {park.NAME}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            {park.DESCRIPTION}
           </Typography>
         </Box>
       </Modal>

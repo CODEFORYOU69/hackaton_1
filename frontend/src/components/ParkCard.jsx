@@ -12,7 +12,15 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import SimpleModal from "./SimpleModal";
 
-function ParkCard({ parks, setGetID, handleClick, getID, country, theme }) {
+function ParkCard({
+  parks,
+  setGetID,
+  handleClick,
+  getID,
+  country,
+  theme,
+  attraction,
+}) {
   const addStorage = (park) => {
     const storedData = window.localStorage.parks
       ? window.localStorage.parks.split(",")
@@ -38,6 +46,7 @@ function ParkCard({ parks, setGetID, handleClick, getID, country, theme }) {
   return (
     <div className="park-card-container">
       {parks
+        .filter((park) => park.NAME.includes(attraction))
         .filter((park) => country.length === 0 || park.COUNTRY === country)
         .filter((park) => theme.length === 0 || park.THEME === theme)
         .map((park) => (
